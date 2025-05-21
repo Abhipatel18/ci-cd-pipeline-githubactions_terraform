@@ -1,0 +1,17 @@
+name: CI Placeholder
+
+on:
+  push:
+    branches: [ dev, 'feature/**' ]
+  pull_request:
+    branches: [ dev ]
+
+jobs:
+  placeholder:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      - name: Hello message
+        run: echo "CI placeholder is working!"
+
