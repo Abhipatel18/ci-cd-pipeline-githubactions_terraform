@@ -2,7 +2,7 @@ name: CI Placeholder
 
 on:
   push:
-    branches: [ dev, 'feature/**' ]
+    branches: [ dev, 'feature' ]
   pull_request:
     branches: [ dev ]
 
