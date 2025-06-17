@@ -16,10 +16,8 @@ jobs:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
       - name: Build and push Docker image
-        run: >
-          docker build -t node-app:latest -t node-app:${{ github.sha }} -f
-          ./app/Dockerfile
-  
+        run: 
+          docker build -t node-app:latest -t node-app:${{ github.sha }} -f ./app/Dockerfile
           docker tag  node-app:${{ github.sha }} ${{ secrets.DOCKER_USERNAME }}/node-app:${{ github.sha }}
   
           docker tag node-app:latest ${{ secrets.DOCKER_USERNAME }}/node-app:latest
